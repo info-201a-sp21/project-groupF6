@@ -7,17 +7,18 @@
 **What other examples of data driven project have you found related to this domain?**
 
   Other examples of data driven project we have found related to this domain are...
-  - [Classification of NBA Salaries through Player Statistics](https://sportsanalytics.berkeley.edu/projects/nba-salaries-stats.pdf),
-  - [Analysis of the Effects of Positional Features on NBA Shot Efficiency](https://sportsanalytics.berkeley.edu/projects/nba-shot-eval.pdf),
-  - [Predicting Points in the NBA](https://sports.sites.yale.edu/predicting-points-nba),
+  - [Classification of NBA Salaries through Player Statistics](https://sportsanalytics.berkeley.edu/projects/nba-salaries-stats.pdf) - this project takes player salary data as well as player statistics (points, turnovers, rebounds, etc.) and attempts to predict salaries for incoming free agents of the 2018 class. Data used in this project were taken from Spotrac and Basketball Reference.
+  - [Analysis of the Effects of Positional Features on NBA Shot Efficiency](https://sportsanalytics.berkeley.edu/projects/nba-shot-eval.pdf) - This project presents NBA trained on positional player data, player rating data, and shot evaluators, which classifies an attempt into a make or miss and the efficiency of a shot. Data from this project were taken from the 2015-2016 NBA regular season involving the Portland Trail Blazers and NBA 2K in order to develop features and understand player skill.
+  - [Predicting Points in the NBA](https://sports.sites.yale.edu/predicting-points-nba) -
+This project presents NBA trained on positional player data, player rating datas, and shot evaluators, which classifies an attempt into a make or miss and the efficiency of a shot. Data from this project were taken from the 2015-2016 NBA regular season involving the Portland Trail Blazers and NBA 2K in order to develop features and understand player skill.
 
 
 **What data-driven questions do you hope to answer about this domain?**
 
   Some data-driven questions we hope to answer about this domain are...
-  - Question 1
-  - Question 2
-  - Question 3
+  - What specific factors affected a team's odds of winning a game?
+  - What player is the best overall shooter in the NBA?
+  - What country won the most gold medals?
 
 ## **Finding Data**
 ### Detailed NFL Play-by-Play Data 2009-2018
@@ -34,7 +35,7 @@
     > 255 features
 
 * What questions (from above) can be answered using the data in this dataset?
-    >
+    > Using the data in this dataset, it can help answer the first question since it shows how each play they make affect their odds of winning the game.
 
 ### NBA Shot Logs
 * Where did you download the data (e.g., a web URL)?
@@ -50,7 +51,7 @@
     > 21 features (columns)
 
 * What questions (from above) can be answered using the data in this dataset?
-    > .
+    > Using data in this dataset, it can help answer the second question since it shows data of shots from different location which can help evaluate who the best shooter is.
 
 ### 120 Years of Olympic History: Athletes and Results
   * Where did you download the data (e.g., a web URL)?
@@ -66,4 +67,4 @@
     > 15 features (columns)
 
   * What questions (from above) can be answered using the data in this dataset?
-    >
+    > Using data in this dataset, it can help answer the third question since the data shows all sorts of information about the athletes including the country they represent and what kind of medal they won. 
