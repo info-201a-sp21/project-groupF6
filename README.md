@@ -7,7 +7,7 @@
 **What other examples of data driven project have you found related to this domain?**
 
   Other examples of data driven project we have found related to this domain are...
-  - [Classification of NBA Salaries through Player Statistics](https://sportsanalytics.berkeley.edu/projects/nba-salaries-stats.pdf) - this project takes player salary data as well as player statistics (points, turnovers, rebounds, etc.) and attempts to predict salaries for incoming free agents of the 2018 class. Data used in this project were taken from Spotrac and Basketball Reference.
+  - [Classification of NBA Salaries through Player Statistics](https://sportsanalytics.berkeley.edu/projects/nba-salaries-stats.pdf) - This project takes player salary data as well as player statistics (points, turnovers, rebounds, etc.) and attempts to predict salaries for incoming free agents of the 2018 class. Data used in this project were taken from Spotrac and Basketball Reference.
   - [Analysis of the Effects of Positional Features on NBA Shot Efficiency](https://sportsanalytics.berkeley.edu/projects/nba-shot-eval.pdf) - This project presents NBA trained on positional player data, player rating data, and shot evaluators, which classifies an attempt into a make or miss and the efficiency of a shot. Data from this project were taken from the 2015-2016 NBA regular season involving the Portland Trail Blazers and NBA 2K in order to develop features and understand player skill.
   - [Predicting Points in the NBA](https://sports.sites.yale.edu/predicting-points-nba) -
 This project presents NBA trained on positional player data, player rating datas, and shot evaluators, which classifies an attempt into a make or miss and the efficiency of a shot. Data from this project were taken from the 2015-2016 NBA regular season involving the Portland Trail Blazers and NBA 2K in order to develop features and understand player skill.
@@ -67,4 +67,4 @@ This project presents NBA trained on positional player data, player rating datas
     > 15 features (columns)
 
   * What questions (from above) can be answered using the data in this dataset?
-    > Using data in this dataset, it can help answer the third question since the data shows all sorts of information about the athletes including the country they represent and what kind of medal they won. 
+    > Using data in this dataset, it can help answer the third question since the data shows all sorts of information about the athletes including the country they represent and what kind of medal they won.
