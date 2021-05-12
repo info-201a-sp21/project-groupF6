@@ -50,7 +50,7 @@
     > 21 features (columns)
 
 * What questions (from above) can be answered using the data in this dataset?
-    >
+    > .
 
 ### 120 Years of Olympic History: Athletes and Results
   * Where did you download the data (e.g., a web URL)?
