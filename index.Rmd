@@ -1,0 +1,16 @@
+---
+title: "Midpoint Deliverable"
+output: html_document
+---
+
+## Introductory paragraph
+Write an introductory paragraph explaining the domain/data set (feel free to borrow from the brainstorm part of the assignment)
+
+## Summary Paragraph
+Write a summary paragraph that includes information calculated by your summary information function
+
+## Table
+Render your table and describe pertinent observations found in it
+
+## Purpose
+Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
