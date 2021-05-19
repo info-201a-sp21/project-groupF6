@@ -1,4 +1,4 @@
-# Project Brainstorm
+# Midpoint Deliverable
 ## **Domain of Interest: Sports**
 **Why are you interested in this field/domain?**
 
