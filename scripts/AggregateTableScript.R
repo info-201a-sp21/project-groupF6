@@ -10,4 +10,3 @@ aggregate_info <- function(df) {
     summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE)) %>%
     arrange(-Total_Medals)
 }
-
