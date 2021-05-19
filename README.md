@@ -1,4 +1,4 @@
-# Midpoint Deliverable
+# Final Project
 ## **Domain of Interest: Sports**
 **Why are you interested in this field/domain?**
 
