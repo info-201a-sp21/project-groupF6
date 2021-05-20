@@ -1,13 +1,17 @@
-#plot 2
-play_by_play <- read.csv("./data/NFLPlaybyPlay20092018.csv", stringsAsFactors = FALSE))
+#plot 3
+athlete_events <- read.csv("data/athlete_events.csv", stringsAsFactors = FALSE)
 
 library("dplyr")
 library("ggplot2")
 library("leaflet")
 library("plotly")
+filtered_athletevents <- na.omit(athlete_events)
 
-##side of field vs postteam winning probabilty 
+sex_versus_medal <- ggplot(data = filtered_athletevents, aes(x = "" , y = "" , fill = Medal)) +
+  geom_bar(width = 1, stat = "identity") +
+  coord_polar("y", start = 0) + 
+  facet_grid(.~Sex) +
+  labs(x = NULL,
+       y = NULL,
+       title = "Sex Versus Medal Earned")
 
-
-##you must describe why you included the chart (e.g., what it attempts to seeks to express), 
-##and what information it reveals
