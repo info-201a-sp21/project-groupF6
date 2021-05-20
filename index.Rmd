@@ -5,6 +5,9 @@ output: html_document
 ```{r include = FALSE}
 source("scripts/aggregateTableScript.R")
 source("scripts/summaryInformation.R")
+source("scripts/barChart.R")
+source("scripts/pieChart.R")
+source("scripts/scalePlot.R")
 library(knitr)
 ```
 ### Introductory paragraph 
@@ -35,20 +38,30 @@ df <- aggregate_info(athlete_events)
 kable(df)
 ```
 
-### Purpose
-Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+### Charts
 
 **Chart 1**
-```{r echo = F}
 
+The bar chart shown below answers the question of if age has a relationship with medals earned. It also presents the trend between age and medals earned in the Olympic Games.
+ 
+This chart specifically reveals that Olympic Athletes in their 20's earned the most amount of medals, including Bronze, Silver, and Gold individually. It also reveals that Olympic Athletes in their 30's came 2nd, 10's came in 3rd, 40's came in 4th, and 50's came in 5th. It can be concluded that Olympic Athletes in their 20's are most likely to earn a medal compared to any other age range. 
+```{r echo = F}
+age_versus_medal
 ```
 
 **Chart 2**
-```{r echo = F}
 
+This pie chart presents the difference between the amount of medals earned by male athletes and amount of medals earned by female athletes. The “amount of medals” can also be seen individually by Gold, Silver, and Bronze.
+
+This pie chart reveals which sex is most likely to earn more medals in total, as well as individually. Although this may be more specific with sports involved, this pie chart shows that males had more medals in total, as well as in terms of Gold, Silver, and Bronze models compared to females. 
+```{r echo = F}
+sex_versus_medal
 ```
 
 **Chart 3**
-```{r echo = F}
 
+This scale plot chart presents the relationship between the Height, Weight, and Age of Olympic Athletes. 
+This chart can easily reveal many things about the data. For example, it reveals that most of the Olympic Athletes are in their 20s. It also reveals the specifics, such as the height of the lightest athlete in weight, the weight of the tallest athlete, the age of some of the athletes in the 50-59kg range, and vice versa. Many more details can be revealed specifically, through this scale plot.
+```{r echo = F}
+height_vs_weight
 ```
