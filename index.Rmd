@@ -4,16 +4,23 @@ output: html_document
 ---
 ```{r include = FALSE}
 source("scripts/aggregateTableScript.R")
+source("scripts/summaryInformation.R")
 library(knitr)
 ```
 ### Introductory paragraph
 Sports are one of the many things that help connect people and communities across the globe. We're interested in making use of this open dataset so people can grow their appreciation and understanding of sports. Providing this kind of data can help improve player performance and encourage fans to attend games.
 
 ### Summary Paragraph
-Write a summary paragraph that includes information calculated by your summary information function
+```{r echo = F}
+info <- get_summary_info(athlete_events)
+```
+The dataset we used had all sorts of data ranging from `r info$oldest_data` to `r info$newest_data`. 
 
 ### Table
 Render your table and describe pertinent observations found in it
+Some obersvations we found inside our aggregated table
+
+rm(df)
 ```{r echo = F}
 df <- aggregate_info(athlete_events)
 kable(df)
