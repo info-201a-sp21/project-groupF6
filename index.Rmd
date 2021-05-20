@@ -2,15 +2,37 @@
 title: "Midpoint Deliverable"
 output: html_document
 ---
+```{r include = FALSE}
+source("scripts/aggregateTableScript.R")
+library(knitr)
+```
+### Introductory paragraph
+Sports are one of the many things that help connect people and communities across the globe. We're interested in making use of this open dataset so people can grow their appreciation and understanding of sports. Providing this kind of data can help improve player performance and encourage fans to attend games.
 
-## Introductory paragraph
-Write an introductory paragraph explaining the domain/data set (feel free to borrow from the brainstorm part of the assignment)
-
-## Summary Paragraph
+### Summary Paragraph
 Write a summary paragraph that includes information calculated by your summary information function
 
-## Table
+### Table
 Render your table and describe pertinent observations found in it
+```{r echo = F}
+df <- aggregate_info(athlete_events)
+kable(df)
+```
 
-## Purpose
+### Purpose
 Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+
+**Chart 1**
+```{r echo = F}
+
+```
+
+**Chart 2**
+```{r echo = F}
+
+```
+
+**Chart 3**
+```{r echo = F}
+
+```
