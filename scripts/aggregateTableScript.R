@@ -1,6 +1,6 @@
 athlete_events <- read.csv("data/athlete_events.csv", stringsAsFactors = FALSE)
 
-# This table is group by Team and it includes the teams who have at least won
+# This table is grouped by Team and it includes the teams who have at least won
 # one medal. "Total_medal" counts the top 10 team's total medals whether it be
 # Gold, Silver, or Bronze in order from most to least.
 
