@@ -14,13 +14,17 @@ Sports are one of the many things that help connect people and communities acros
 ```{r echo = F}
 info <- get_summary_info(athlete_events)
 ```
-The dataset we used had all sorts of data ranging from `r info$oldest_data` to `r info$newest_data`. 
+The dataset that we ended up using had all sorts of data regarding the Olympics dating as far back from `r info$oldest_data` up to `r info$newest_data`. The dataset was made up of `r info$length` features such as their names, age, height, weight, team, year, etc. Using these features, we were able to find out all sorts of information from the past 120 years of Olympic history. From `r info$oldest_data` to `r info$newest_data`, the Olympic program consisted of `r info$num_events` events and had `r info$num_teams` teams competing in the Olympics for a medal. We were also able to find out the exact amount of gold medal's acquired from the teams.
+Down below, we can see the top 5 countries/team with the most gold medals.
+
+```{r echo = F}
+kable(info$gold_winners)
+```
+
 
 ### Table
-Render your table and describe pertinent observations found in it
-Some obersvations we found inside our aggregated table
+Some observations we found inside our aggregated table...
 
-rm(df)
 ```{r echo = F}
 df <- aggregate_info(athlete_events)
 kable(df)
