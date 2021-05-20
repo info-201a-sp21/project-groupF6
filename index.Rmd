@@ -23,7 +23,7 @@ kable(info$gold_winners)
 
 
 ### Table
-Some observations we found inside our aggregated table...
+Some observations we found inside our aggregated table were...
 
 ```{r echo = F}
 df <- aggregate_info(athlete_events)
