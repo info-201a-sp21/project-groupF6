@@ -10,7 +10,7 @@ source("scripts/pieChart.R")
 source("scripts/scalePlot.R")
 library(knitr)
 ```
-### Introductory paragraph 
+### Introductory Paragraph 
 Sports are one of the many things that help connect people and communities across the globe. We're interested in making use of this open dataset so people can grow their appreciation and understanding of sports. Providing this kind of data can help improve player performance and encourage fans to attend games.
 
 ### Summary Paragraph
