@@ -12,7 +12,7 @@ get_summary_info <- function(dataset) {
     group_by(NOC) %>%
     summarize(gold_medals = sum(freq, na.rm = FALSE)) %>%
     arrange(desc(gold_medals)) %>%
-    top_n(5)
+    top_n(5, gold_medals)
   summary$oldest_data <- min(dataset$Year, na.rm = FALSE)
   summary$newest_data <- max(dataset$Year, na.rm = FALSE)
   return(summary)
