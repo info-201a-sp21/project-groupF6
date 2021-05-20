@@ -1,9 +1,4 @@
-rm(list = ls())
-library(dplyr)
-athlete_events <- read.csv("data/athlete_events.csv", stringsAsFactors = FALSE)
 
-# summary function - must compute at least five different values from
-# your data that you believe are pertinent to share
 get_summary_info <- function(dataset) {
   summary <- list()
   summary$length <- length(dataset)
