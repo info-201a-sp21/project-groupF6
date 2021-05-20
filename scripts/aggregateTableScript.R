@@ -7,6 +7,14 @@ aggregate_info <- function(df) {
     group_by(Team, NOC, Medal) %>%
     filter(Medal != "NA") %>%
     mutate(Total_Medals = 1) %>%
-    summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE)) %>%
+    summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE, .groups = "keep")) %>%
+    arrange(-Total_Medals)
+}
+test <- function(df) {
+  df %>%
+  group_by(Team, NOC, Medal) %>%
+    filter(Medal != "NA") %>%
+    mutate(Total_Medals = 1) %>%
+    summarise(Total_Medals = sum(Total_Medals, na.rm = TRUE), Team, NOC,  Medal) %>%
     arrange(-Total_Medals)
 }
