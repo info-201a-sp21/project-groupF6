@@ -4,16 +4,32 @@ output: html_document
 ---
 ```{r include = FALSE}
 source("scripts/aggregateTableScript.R")
+source("scripts/summaryInformation.R")
 library(knitr)
 ```
-### Introductory paragraph
+### Introductory paragraph 
 Sports are one of the many things that help connect people and communities across the globe. We're interested in making use of this open dataset so people can grow their appreciation and understanding of sports. Providing this kind of data can help improve player performance and encourage fans to attend games.
 
 ### Summary Paragraph
-Write a summary paragraph that includes information calculated by your summary information function
+```{r echo = F}
+info <- get_summary_info(athlete_events)
+```
+The dataset that we ended up using had all sorts of data regarding the Olympics dating as far back from `r info$oldest_data` up to `r info$newest_data`. The dataset was made up of `r info$length` features such as their names, age, height, weight, team, year, etc. Using these features, we were able to find out all sorts of information from the past 120 years of Olympic history. From `r info$oldest_data` to `r info$newest_data`, the Olympic program consisted of `r info$num_events` events and had `r info$num_teams` teams competing in the Olympics for a medal. We were also able to find out the exact amount of gold medal's acquired from the teams.
+Down below, we can see the top 5 countries/team with the most gold medals.
 
-### Table
-Render your table and describe pertinent observations found in it
+```{r echo = F}
+kable(info$gold_winners)
+```
+
+
+### Table 
+Some pertinent observations we found inside our aggregated table were...
+
+- United States comes in first place with the most won medals
+- Soviet Union comes in second place with half of the United State's total medals
+- Third to tenth place are all in the 1000s with total medals won
+- United States almost has 5 times the amount of total medals compared to Hungary
+
 ```{r echo = F}
 df <- aggregate_info(athlete_events)
 kable(df)
