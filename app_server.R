@@ -1,3 +1,4 @@
+# Make sure to Run App!
 library(shiny)
 source("scripts/summaryInformation.R")
 source("scripts/aggregateTableScript.R")

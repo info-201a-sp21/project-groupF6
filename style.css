@@ -1,0 +1,30 @@
+body {
+  
+}
+
+/* Title of Project */
+h1 {
+  font-family: "Arial";
+  font-size: 65px;
+  font-weight: bold;
+}
+
+/* Subtitle */
+h2 {
+  
+}
+
+/* Page Header */
+h3 {
+  
+}
+
+/* Listing in Summary */
+h4 {
+  
+}
+
+/* Images */
+img {
+  border: 3px solid black;
+}
