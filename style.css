@@ -1,5 +1,6 @@
 body {
-  
+  font-family: "Helvetica", times, serif;
+  font-size: 15px;
 }
 
 /* Title of Project */
@@ -12,13 +13,15 @@ h1 {
 /* Subtitle */
 h2 {
   font-family: "Times New Roman";
-  font-size: 35px;
+  font-size: 30px;
   font-style: italic;
 }
 
 /* Page Header */
 h3 {
-  
+  font-family: "Arial";
+  font-size: 45px;
+  font-weight: bold; 
 }
 
 /* Listing in Summary */
