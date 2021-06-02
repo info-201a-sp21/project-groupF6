@@ -34,31 +34,30 @@ ui <- fluidPage(
   ## Creates multiple tabs
   tabsetPanel(
     ## Introduction Page
-    tabPanel (
+    tabPanel(
       "Introduction",
       h3("Going Through the Olympics Data"),
-      
       br(),
       # Image
       HTML('<img src = "olympiclogo.jpg">'),
       br(),
-      
       # Overview of project
-      paste("In this project, we delved into the history of the Olympics,",
-            "looking into data such as the athlete's names, sex, age, height",
-            "weight, the team they played for, which event they play for, etc.",
-            "Questions that we looked into during this project were:",
-            "Did age have a relationship with the amount of medals won,",
-            "Question 2,",
-            "Question 3."),
-
+      paste(
+        "In this project, we delved into the history of the Olympics,",
+        "looking into data such as the athlete's names, sex, age, height",
+        "weight, the team they played for, which event they play for, etc.",
+        "Questions that we looked into during this project were:",
+        "Did age have a relationship with the amount of medals won,",
+        "Question 2,",
+        "Question 3."
+      ),
     ),
 
     ## 1st Interactive Page
     tabPanel(
       "1st Interactive Page",
       titlePanel(
-        "Top 10 Team's Total Medals(Gold, Silver, Bronze) Through the Years"
+        "Top 10 Team's Total Medals (Gold, Silver, Bronze) Through the Years"
       ),
       bar_main,
       bar_side
@@ -80,4 +79,3 @@ ui <- fluidPage(
     )
   )
 )
-
