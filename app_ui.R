@@ -1,40 +1,62 @@
 library(shiny)
 
-## Create some widgets/lists/etc up here and add them into interactive pages as sidebarPanels or something
+## Create some widgets/lists/etc up here and add them into interactive pages as
+## sidebarPanels or something
+
+
+bar_main <- mainPanel(
+  plotlyOutput("total")
+)
+
+bar_side <- sidebarPanel(
+  sliderInput(
+    "yearvar",
+    label = "Year",
+    min = min(athlete_events$Year),
+    max = max(athlete_events$Year),
+    value = min(athlete_events$Year),
+    sep = ""
+  )
+)
 
 ui <- fluidPage(
-  
+
   ## Custom CSS style
   includeCSS("style.css"),
   ## Title
   h1("Analysis of the Olympic History"),
   ## Authors
   h2("By Isaac Garibay-Zamudio, Veronica Mendoza, Hannah Pae, and Ryan Tran"),
-  
+
   ## Creates multiple tabs
   tabsetPanel(
     ## Introduction Page
-    tabPanel (
+    tabPanel(
       "Introduction"
     ),
-    
+
     ## 1st Interactive Page
-    tabPanel (
-      "1st Interactive Page"
+    tabPanel(
+      "1st Interactive Page",
+      titlePanel(
+        "Top 10 Team's Total Medals(Gold, Silver, Bronze) Through the Years"
+      ),
+      bar_main,
+      bar_side
     ),
-    
+
     ## 2nd Interactive Page
-    tabPanel (
+    tabPanel(
       "2nd Interactive Page"
     ),
-    
+
     ## 3rd Interactive Page
-    tabPanel (
+    tabPanel(
       "3rd Interactive Page"
     ),
-    
+
     ## Summary
-    tabPanel (
+    tabPanel(
       "Summary Takeaway"
     )
   )
