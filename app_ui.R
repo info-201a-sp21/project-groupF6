@@ -48,15 +48,16 @@ ui <- fluidPage(
             "looking into data such as the athlete's names, sex, age, height",
             "weight, the team they played for, which event they play for, etc.",
             "Questions that we looked into during this project were:"),
+      
       br(),
+      h4(
       paste("Did age have a relationship with how successful they were",
             "in sports?"),
       br(),
       paste("Did gender have a relationship with how successful they", 
             "were in sports?"),
       br(),
-      paste("Did any specific country showed more success than others?"),
-      br(),
+      paste("Did any specific country showed more success than others?")),
       paste("In the beginning, we were utilizing 3 datasets in order to figure",
             "out the answers to our questions however we ended with only using",
             "one in the final version of our project."),
@@ -74,9 +75,7 @@ ui <- fluidPage(
             "2016."),
       br(),
       paste("We found this dataset on Kaggle which can be found at this"),
-      a(href = paste0("https://www.kaggle.com/heesoo37/
-                      120-years-of-olympic-history-athletes-and-results?select
-                      =athlete_events.csv"),
+      a(href = ("https://bit.ly/3gkv9LZ"),
         "link"),
 
     ),
