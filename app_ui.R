@@ -42,15 +42,24 @@ ui <- fluidPage(
       # Image
       HTML('<img src = "olympiclogo.jpg">'),
       br(),
+      br(),
       
       # Overview of project
       paste("In this project, we delved into the history of the Olympics,",
             "looking into data such as the athlete's names, sex, age, height",
             "weight, the team they played for, which event they play for, etc.",
-            "Questions that we looked into during this project were:",
-            "Did age have a relationship with the amount of medals won,",
-            "Question 2,",
-            "Question 3."),
+            "Questions that we looked into during this project were:"),
+      br(),
+      paste("Did age have a relationship with success in sports?"),
+      br(),
+      paste("Did gender have a relationship with success in sports?"),
+      br(),
+      paste("Did any specific country showed more success than others in",
+            "sports?"),
+      br(),
+      paste("In the beginning, we were utilizing 3 datasets in order to figure",
+            "out the answers to our questions however we ended with only using",
+            "one in the final version of our project."),
 
     ),
 
