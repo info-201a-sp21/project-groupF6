@@ -1,4 +1,7 @@
+# Make sure to Run App!
 library(shiny)
+library(plotly)
+library(dplyr)
 
 ## Create some widgets/lists/etc up here and add them into interactive pages as sidebarPanels or something
 
@@ -15,7 +18,22 @@ ui <- fluidPage(
   tabsetPanel(
     ## Introduction Page
     tabPanel (
-      "Introduction"
+      "Introduction",
+      h3("Going Through the Olympics Data"),
+      
+      br(),
+      # Image
+      HTML('<img src = "olympics.jpg">'),
+      br(),
+      
+      # Overview of project
+      paste("In this project, we delved into the history of the Olympics,",
+            "looking into data such as the athlete's names, sex, age, height",
+            "weight, the team they played for, which event they play for, etc.",
+            "Questions that we looked into during this project were:",
+            "Did age have a relationship with the amount of medals won,",
+            "Question 2,",
+            "Question 3."),
     ),
     
     ## 1st Interactive Page
@@ -39,3 +57,4 @@ ui <- fluidPage(
     )
   )
 )
+
