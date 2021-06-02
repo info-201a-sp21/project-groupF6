@@ -23,7 +23,7 @@ ui <- fluidPage(
       
       br(),
       # Image
-      HTML('<img src = "olympics.jpg">'),
+      HTML('<img src = "olympiclogo.jpg">'),
       br(),
       
       # Overview of project
