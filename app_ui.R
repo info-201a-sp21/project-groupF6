@@ -40,8 +40,7 @@ ui <- fluidPage(
       
       br(),
       # Image
-      HTML('<img src = "olympiclogo.jpg">'),
-      br(),
+      HTML('<center><img src = "olympiclogo.jpg"><center>'),
       br(),
       
       # Overview of project
@@ -61,6 +60,22 @@ ui <- fluidPage(
       paste("In the beginning, we were utilizing 3 datasets in order to figure",
             "out the answers to our questions however we ended with only using",
             "one in the final version of our project."),
+      
+      br(),
+      br(),
+      # Image
+      HTML('<center><img src = "track.jpg"><center>'),
+      br(),
+      
+      paste("The dataset we used contains all sorts of information ranging",
+            "from the athlete's names and gender to which country they",
+            "represented/played for and which event they participated in.",
+            "This historical dataset included games from Athens 1896 to Rio",
+            "2016. We found this dataset on Kaggle which can be found at this"),
+      a(href = paste0("https://www.kaggle.com/heesoo37/
+                      120-years-of-olympic-history-athletes-and-results?select
+                      =athlete_events.csv"),
+        "link"),
 
     ),
 
