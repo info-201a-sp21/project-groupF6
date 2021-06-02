@@ -27,7 +27,8 @@ h3 {
 
 /* Listing in Summary */
 h4 {
-  
+  font-weight: bold;
+  font-size: 15px;
 }
 
 /* Images */
