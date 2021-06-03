@@ -47,7 +47,7 @@ age_select <- sidebarPanel(
     ## Introduction Page
     tabPanel (
       "Introduction",
-      h3("Going Through the Olympics Data"),
+      h3("Going Through the Olympics Data",  align = "center"),
       
       br(),
       # Image
@@ -118,8 +118,12 @@ age_select <- sidebarPanel(
 
     ## Summary
     tabPanel(
-      "Summary Takeaway"
+      "Summary Takeaway",
+      h3("Takeaway #1"),
+      h3("Takeaway #2"),
+      h3("Takeaway #3"),
     )
+   
   )
 )
 
