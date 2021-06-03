@@ -2,9 +2,6 @@
 library(shiny)
 library(plotly)
 
-## Create some widgets/lists/etc up here and add them into interactive pages as
-## sidebarPanels or something
-
 athlete_events <- read.csv("data/athlete_events.csv", stringsAsFactors = FALSE)
 
 bar_main <- mainPanel(
@@ -149,7 +146,30 @@ ui <- fluidPage(
   ## Summary
   tabPanel(
     "Summary Takeaway",
-    h3("Takeaway #1"),
+    h3("Total Medals"),
+    h4("United States"),
+    paste("Throughout the years, United States has demonstrated their",
+          "dominance in the Olympics. Ever since 1904, United States has",
+          "maintained their lead in total medals including gold, silver, and",
+          "bronze medals over any other country. In 2016, United States were",
+          "able to acquire just over 5000 total medals"),
+    h4("Soviet Union"),
+    paste("The Soviet Union didn't even make it onto the top 10 team's total",
+          "medals list until 1960 racking in slightly above 500 total medals",
+          "while United States already had well above 1500 total medals.",
+          "But as the years went by, Soviet Union quickly rose through the",
+          "list and came close to the United States in 1982 with a staggering",
+          "2000 total medals, 1500 more than what they had just 22 years ago.",
+          "Their pace quickly fell off after that and they ended up only",
+          "having around 2500 total medals in 2016, half of what the United",
+          "States have."),
+    h4("Germany"),
+    paste("Like the United States, Germany has been in the top 10 total medals",
+          "list since 1896. Unlike the Soviet Union who had a quick rise in a",
+          "short period of time, Germany has been keeping a steady pace with",
+          "the amount of medals they have won. Averaging around 16 medals a",
+          "year, Germany came in third place with the most amount of total",
+          "medals in 2016 with araound 2000 medals."),
     h3("Takeaway #2"),
     h3("Takeaway #3"),
   )
