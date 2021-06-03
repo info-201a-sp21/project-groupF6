@@ -146,6 +146,8 @@ ui <- fluidPage(
   ## Summary
   tabPanel(
     "Summary Takeaway",
+    
+    ## 1st Takeaway
     h3("Total Medals"),
     h4("United States"),
     paste("Throughout the years, United States has demonstrated their",
@@ -170,7 +172,33 @@ ui <- fluidPage(
           "the amount of medals they have won. Averaging around 16 medals a",
           "year, Germany came in third place with the most amount of total",
           "medals in 2016 with araound 2000 medals."),
-    h3("Takeaway #2"),
+    
+    ## 2nd Takeaway
+    h3("Gender"),
+    h4("Sex and Medal Earned"),
+    paste("Males were able to acquire 9524 bronze medals, 9381 silver medals",
+          "and 9625 gold medals. Females were able to obatin 3771 bronze",
+          "medals, 3735 silver medals, and 3747 gold medals. Even though males",
+          "were able to almost triple the amount of medals females earned,",
+          "both sex had almost the same ratio between their medals, not having",
+          "a significant amount more of bronze medals than gold medals and",
+          "versa."),
+    h4("The Full Picture"),
+    paste("Showing the data between the total medals each sex earned does not",
+          "show the full picture of what really happened. From the database",
+          "we used, we see that there were more male participants than female",
+          "participants. We also see that as the years went by, there were",
+          "more females participating in the Olympics. This can be due to the",
+          "Olympic Charter decision to make the presence of women mandatory",
+          "in every sport in 2007 since before, they were only allowed to",
+          "participate in sports that were considered to be compatible with",
+          "their feminity and fragility such as tennis and were excluded",
+          "from events such as track and field. Women weren't able to",
+          "participate in many events which is a huge factor contributing to",
+          "their small amount of total medals earned compared to men who were",
+          "allowed to participate in any event."),
+    
+    ## 3rd Takeaway
     h3("Takeaway #3"),
   )
 )
