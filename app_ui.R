@@ -1,11 +1,11 @@
 # Make sure to Run App!
-#library(shiny)
-#library(plotly)
-#library(dplyr)
+library(shiny)
+library(plotly)
 
 ## Create some widgets/lists/etc up here and add them into interactive pages as
 ## sidebarPanels or something
 
+athlete_events <- read.csv("data/athlete_events.csv", stringsAsFactors = FALSE)
 
 bar_main <- mainPanel(
   plotlyOutput("total")
