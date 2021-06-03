@@ -19,6 +19,7 @@ bar_side <- sidebarPanel(
   )
 )
 sex_select <- sidebarPanel(
+  paste0("Select an option to view!"),
   radioButtons(
     inputId = "selectedSex",
     label = "Sex:",
@@ -114,7 +115,7 @@ ui <- fluidPage(
 
     ## 1st Interactive Page
     tabPanel(
-      "1st Interactive Page",
+      "Top 10 Team's Medals",
       titlePanel(
         "Top 10 Team's Total Medals (Gold, Silver, Bronze) Through the Years"
       ),
@@ -124,7 +125,7 @@ ui <- fluidPage(
 
     ## 2nd Interactive Page
     tabPanel(
-      "2nd Interactive Page",
+      "Sex Versus Medal",
       titlePanel(
         "Relationship Between Sex and Medal Earned"
       ),
@@ -135,7 +136,7 @@ ui <- fluidPage(
 
   ## 3rd Interactive Page
   tabPanel(
-    "3rd Interactive Page",
+    "Medal Count Across Age",
     titlePanel(
       "Total Medal Count Across Age Groups"
     ),

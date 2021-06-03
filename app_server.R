@@ -56,7 +56,7 @@ server <- function(input, output) {
       data = sex_vs_medal(),
       x = ~Total_Medals,
       y = ~Medal,
-      type = "bar"
+      type = "scatter"
     ) %>%
       layout(
         title = paste0("Sex Versus Medal Earned"),
