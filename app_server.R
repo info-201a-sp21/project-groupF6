@@ -1,12 +1,12 @@
 # Make sure to Run App!
-library(shiny)
-source("scripts/summaryInformation.R")
-source("scripts/aggregateTableScript.R")
-source("scripts/barChart.R")
-source("scripts/pieChart.R")
-source("scripts/scalePlot.R")
+#library(shiny)
+#source("scripts/summaryInformation.R")
+#source("scripts/aggregateTableScript.R")
+#source("scripts/barChart.R")
+#source("scripts/pieChart.R")
+#source("scripts/scalePlot.R")
 
-athlete_events <- read.csv("data/athlete_events.csv", stringsAsFactors = FALSE)
+athlete_events <- read.csv("athlete_events.csv", stringsAsFactors = FALSE)
 
 server <- function(input, output) {
   vars <- reactive({
@@ -51,15 +51,15 @@ server <- function(input, output) {
                 Sex = Sex)
     factor()
   })
-  output$total2 <- renderPlotly({
+  output$barplot2 <- renderPlotly({
     boxplot2 <- plot_ly(
       data = sex_vs_medal(),
-      x = ~,
-      y = ~,
+      x = ~Sex,
+      y = ~Total_Medals,
       type = "bar"
     ) %>%
       layout(
-        title = paste0("Sex Versus Medal Earned "),
+        title = paste0("Sex Versus Medal Earned"),
         xaxis = list(title = "Sex"),
         yaxis = list(title = "Medal Earned")
       )
@@ -75,12 +75,12 @@ server <- function(input, output) {
       Age > 35 ~ "More than 35 years"))
   
   age_group_summary <- reactive({
-    req(input$selected_age) 
+    req(input$selectedAge) 
     df <- by_age %>%
       group_by(Age_Group) %>%
       filter(Medal != "NA") %>%
       mutate(Total_Medals = 1) %>%
-      filter(Age_Group == input$selected_age) %>%
+      filter(Age_Group == input$selectedAge) %>%
       summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE), 
                 Age = Age)
   })
@@ -93,7 +93,7 @@ server <- function(input, output) {
       type = "bar"
     ) %>%
       layout(
-        title = paste0("Total Medals by Age Group (", input$selected_age, ")"),
+        title = paste0("Total Medals by Age Group (", input$selectedAge, ")"),
         xaxis = list(title = "Age in Years"),
         yaxis = list(title = "Total Medals")
       )

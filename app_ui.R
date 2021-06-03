@@ -1,7 +1,7 @@
 # Make sure to Run App!
-library(shiny)
-library(plotly)
-library(dplyr)
+#library(shiny)
+#library(plotly)
+#library(dplyr)
 
 ## Create some widgets/lists/etc up here and add them into interactive pages as
 ## sidebarPanels or something
@@ -23,17 +23,19 @@ bar_side <- sidebarPanel(
 )
 sex_select <- sidebarPanel(
   radioButtons(
-    inputId = "selectedSex", 
-    label = "Sex:", 
+    inputId = "selectedSex",
+    label = "Sex:",
     choices = list("Female" = 1, "Male" = 2),
     selected = 1, 2
-    
   )
 )
 bar_second <- mainPanel(
   plotlyOutput(
     outputId = "barplot2"
   )
+)
+age_bar <- mainPanel(
+  plotlyOutput("bar")
 )
 age_select <- sidebarPanel(
   selectInput(
@@ -61,35 +63,38 @@ ui <- fluidPage(
     ## Introduction Page
     tabPanel(
       "Introduction",
-      h3("Going Through the Olympics Data",  align = "center"),
-
+      h3("Going Through the Olympics Data", align = "center"),
       br(),
       # Image
       HTML('<center><img src = "olympiclogo.jpg"><center>'),
       br(),
-      
-      # Overview of project
-      paste("In this project, we delved into the history of the Olympics,",
-            "looking into data such as the athlete's names, sex, age, height",
-            "weight, the team they played for, which event they play for, etc.",
-            "Questions that we looked into during this project were:"),
-      
-      br(),
-      h4(
-      paste("Did age have a relationship with how successful they were",
-            "in sports?"),
 
-      br(),
+      # Overview of project
       paste(
-        "Did gender have a relationship with how successful they",
-        "were in sports?"
+        "In this project, we delved into the history of the Olympics,",
+        "looking into data such as the athlete's names, sex, age, height",
+        "weight, the team they played for, which event they play for, etc.",
+        "Questions that we looked into during this project were:"
       ),
       br(),
-      paste("Did any specific country showed more success than others?")),
-      paste("In the beginning, we were utilizing 3 datasets in order to figure",
-            "out the answers to our questions however we ended with only using",
-            "one in the final version of our project."),
-      
+      h4(
+        paste(
+          "Did age have a relationship with how successful they were",
+          "in sports?"
+        ),
+        br(),
+        paste(
+          "Did gender have a relationship with how successful they",
+          "were in sports?"
+        ),
+        br(),
+        paste("Did any specific country showed more success than others?")
+      ),
+      paste(
+        "In the beginning, we were utilizing 3 datasets in order to figure",
+        "out the answers to our questions however we ended with only using",
+        "one in the final version of our project."
+      ),
       br(),
       br(),
       # Image
@@ -104,9 +109,10 @@ ui <- fluidPage(
       ),
       br(),
       paste("We found this dataset on Kaggle which can be found at this"),
-      a(href = ("https://bit.ly/3gkv9LZ"),
-        "link"),
-      
+      a(
+        href = ("https://bit.ly/3gkv9LZ"),
+        "link"
+      ),
     ),
 
     ## 1st Interactive Page
@@ -126,27 +132,26 @@ ui <- fluidPage(
         "Relationship Between Sex and Medal Earned"
       ),
       sex_select,
-      bar_second,
-    ),
-    ),
-
-    ## 3rd Interactive Page
-    tabPanel(
-      "3rd Interactive Page",
-      titlePanel(
-        "Total Medal Count Across Age Groups"
-      ),
-      age_select,
-      plotlyOutput("bar"),
+      bar_second
     ),
 
-    ## Summary
-    tabPanel(
-      "Summary Takeaway",
-      h3("Takeaway #1"),
-      h3("Takeaway #2"),
-      h3("Takeaway #3"),
-    )
-     
+
+  ## 3rd Interactive Page
+  tabPanel(
+    "3rd Interactive Page",
+    titlePanel(
+      "Total Medal Count Across Age Groups"
+    ),
+    age_select,
+    age_bar
+  ),
+
+  ## Summary
+  tabPanel(
+    "Summary Takeaway",
+    h3("Takeaway #1"),
+    h3("Takeaway #2"),
+    h3("Takeaway #3"),
   )
+)
 )
