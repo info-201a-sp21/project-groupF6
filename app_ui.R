@@ -35,6 +35,8 @@ age_select <- sidebarPanel(
   )
 )
 
+ui <- fluidPage(
+
   ## Custom CSS style
   includeCSS("style.css"),
   ## Title
@@ -127,6 +129,6 @@ age_select <- sidebarPanel(
       h3("Takeaway #2"),
       h3("Takeaway #3"),
     )
-   
+     
   )
 )
