@@ -40,16 +40,18 @@ server <- function(input, output) {
       )
     return(plot)
   })
-  
+
   sex_vs_medal <- reactive({
-    req(input$selectedSex) 
+    req(input$selectedSex)
     df <- athlete_events %>%
-      group_by(Sex, Medal) %>% 
+      group_by(Sex, Medal) %>%
       filter(Medal != "NA") %>%
       mutate(Total_Medals = 1) %>%
-      filter(Sex == input$selectedSex) %>% 
-      summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE),
-                .groups = "keep")
+      filter(Sex == input$selectedSex) %>%
+      summarize(
+        Total_Medals = sum(Total_Medals, na.rm = TRUE),
+        .groups = "keep"
+      )
   })
   output$barplot2 <- renderPlotly({
     boxplot2 <- plot_ly(
@@ -65,26 +67,29 @@ server <- function(input, output) {
       )
     return(boxplot2)
   })
-  
+
   by_age <- athlete_events %>%
     filter(Age != "NA") %>%
     mutate(Age_Group = case_when(
       Age < 18 ~ "Less than 18 years",
       Age >= 18 & Age <= 24 ~ "18-24 years",
       Age >= 25 & Age <= 35 ~ "25-35 years",
-      Age > 35 ~ "More than 35 years"))
-  
+      Age > 35 ~ "More than 35 years"
+    ))
+
   age_group_summary <- reactive({
-    req(input$selectedAge) 
+    req(input$selectedAge)
     df <- by_age %>%
       group_by(Age_Group) %>%
       filter(Medal != "NA") %>%
       mutate(Total_Medals = 1) %>%
       filter(Age_Group == input$selectedAge) %>%
-      summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE), 
-                Age = Age, .groups = "keep")
+      summarize(
+        Total_Medals = sum(Total_Medals, na.rm = TRUE),
+        Age = Age, .groups = "keep"
+      )
   })
-  
+
   output$bar <- renderPlotly({
     barplot <- plot_ly(
       data = age_group_summary(),
