@@ -60,7 +60,7 @@ server <- function(input, output) {
     ) %>%
       layout(
         title = paste0("Sex Versus Medal Earned"),
-        xaxis = list(title = "Sex"),
+        xaxis = list(title = "Count of Medals"),
         yaxis = list(title = "Medal Earned")
       )
     return(boxplot2)
