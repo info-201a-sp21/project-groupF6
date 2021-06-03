@@ -22,7 +22,18 @@ bar_side <- sidebarPanel(
   )
 )
 
-ui <- fluidPage(
+age_select <- sidebarPanel(
+  selectInput(
+    inputId = "selectedAge",
+    label = "Select Age Group",
+    choices = list(
+      "Less than 18 years",
+      "18-24 years",
+      "25-35 years",
+      "More than 35 years"
+    )
+  )
+)
 
   ## Custom CSS style
   includeCSS("style.css"),
@@ -101,7 +112,12 @@ ui <- fluidPage(
 
     ## 3rd Interactive Page
     tabPanel(
-      "3rd Interactive Page"
+      "3rd Interactive Page",
+      titlePanel(
+        "Total Medal Count Across Age Groups"
+      ),
+      age_select,
+      plotlyOutput("bar"),
     ),
 
     ## Summary
