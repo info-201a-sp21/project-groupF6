@@ -21,7 +21,20 @@ bar_side <- sidebarPanel(
     sep = ""
   )
 )
-
+sex_select <- sidebarPanel(
+  radioButtons(
+    inputId = "selectedSex", 
+    label = "Sex:", 
+    choices = list("Female" = 1, "Male" = 2),
+    selected = 1, 2
+    
+  )
+)
+bar_second <- mainPanel(
+  plotlyOutput(
+    outputId = "barplot2"
+  )
+)
 age_select <- sidebarPanel(
   selectInput(
     inputId = "selectedAge",
@@ -108,7 +121,13 @@ ui <- fluidPage(
 
     ## 2nd Interactive Page
     tabPanel(
-      "2nd Interactive Page"
+      "2nd Interactive Page",
+      titlePanel(
+        "Relationship Between Sex and Medal Earned"
+      ),
+      sex_select,
+      bar_second,
+    ),
     ),
 
     ## 3rd Interactive Page
