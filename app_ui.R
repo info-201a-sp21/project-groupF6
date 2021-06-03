@@ -200,6 +200,22 @@ ui <- fluidPage(
     
     ## 3rd Takeaway
     h3("Takeaway #3"),
+    h4("Age"),
+    paste("It would only make sense for a 25 year old to have earn more medals",
+          "than a 70 year old due to the change in body from old age which can",
+          "affect the person's atheltic performance. From the data that we",
+          "analyzed, we can clearly see that their is an age group that",
+          "outperforms the other age groups, indicating that they are at their",
+          "peak performance and is the common age where someone's atheltic",
+          "performance is at its best. The age group 25-35 years old were able",
+          "to rack in almost 60 million total medals alone from 25 years old",
+          "and earing almost 10 million total medals from 35 years old. The",
+          "only age group that even had over a million medals earned was the",
+          "age group between 18 and 24 years old with their highest being just",
+          "slightly above 50 million medals earned and lowest with slightly",
+          "above 10 million medals earned. It goes to show that age has a huge",
+          "role in earning medals since you have a nice balance of having a",
+          "good performance in the event and having experience."),
   )
 )
 )
