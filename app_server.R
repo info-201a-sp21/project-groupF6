@@ -41,4 +41,38 @@ server <- function(input, output) {
       )
     return(plot)
   })
+  
+  by_age <- athlete_events %>%
+    filter(Age != "NA") %>%
+    mutate(Age_Group = case_when(
+      Age < 18 ~ "Less than 18 years",
+      Age >= 18 & Age <= 24 ~ "18-24 years",
+      Age >= 25 & Age <= 35 ~ "25-35 years",
+      Age > 35 ~ "More than 35 years"))
+  
+  age_group_summary <- reactive({
+    req(input$selected_age) 
+    df <- by_age %>%
+      group_by(Age_Group) %>%
+      filter(Medal != "NA") %>%
+      mutate(Total_Medals = 1) %>%
+      filter(Age_Group == input$selected_age) %>%
+      summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE), 
+                Age = Age)
+  })
+  
+  output$bar <- renderPlotly({
+    barplot <- plot_ly(
+      data = age_group_summary(),
+      x = ~Age,
+      y = ~Total_Medals,
+      type = "bar"
+    ) %>%
+      layout(
+        title = paste0("Total Medals by Age Group (", input$selected_age, ")"),
+        xaxis = list(title = "Age in Years"),
+        yaxis = list(title = "Total Medals")
+      )
+    return(barplot)
+  })
 }
