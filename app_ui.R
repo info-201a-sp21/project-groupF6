@@ -25,7 +25,7 @@ sex_select <- sidebarPanel(
   radioButtons(
     inputId = "selectedSex",
     label = "Sex:",
-    choices = list("Female" = 1, "Male" = 2),
+    choices = list("Female" = "F", "Male" = "M"),
     selected = 1, 2
   )
 )

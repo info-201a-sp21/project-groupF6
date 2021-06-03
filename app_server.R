@@ -45,17 +45,18 @@ server <- function(input, output) {
   sex_vs_medal <- reactive({
     req(input$selectedSex) 
     df <- athlete_events %>%
+      group_by(Sex, Medal) %>% 
       filter(Medal != "NA") %>%
       mutate(Total_Medals = 1) %>%
-      summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE), 
-                Sex = Sex)
-    factor()
+      filter(Sex == input$selectedSex) %>% 
+      summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE),
+                .groups = "keep")
   })
   output$barplot2 <- renderPlotly({
     boxplot2 <- plot_ly(
       data = sex_vs_medal(),
-      x = ~Sex,
-      y = ~Total_Medals,
+      x = ~Total_Medals,
+      y = ~Medal,
       type = "bar"
     ) %>%
       layout(
@@ -63,7 +64,7 @@ server <- function(input, output) {
         xaxis = list(title = "Sex"),
         yaxis = list(title = "Medal Earned")
       )
-    return(barplot2)
+    return(boxplot2)
   })
   
   by_age <- athlete_events %>%
@@ -82,7 +83,7 @@ server <- function(input, output) {
       mutate(Total_Medals = 1) %>%
       filter(Age_Group == input$selectedAge) %>%
       summarize(Total_Medals = sum(Total_Medals, na.rm = TRUE), 
-                Age = Age)
+                Age = Age, .groups = "keep")
   })
   
   output$bar <- renderPlotly({
