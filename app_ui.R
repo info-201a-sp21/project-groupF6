@@ -36,7 +36,8 @@ ui <- fluidPage(
     ## Introduction Page
     tabPanel(
       "Introduction",
-      h3("Going Through the Olympics Data"),
+      h3("Going Through the Olympics Data",  align = "center"),
+
       br(),
       # Image
       HTML('<center><img src = "olympiclogo.jpg"><center>'),
@@ -105,7 +106,11 @@ ui <- fluidPage(
 
     ## Summary
     tabPanel(
-      "Summary Takeaway"
+      "Summary Takeaway",
+      h3("Takeaway #1"),
+      h3("Takeaway #2"),
+      h3("Takeaway #3"),
     )
+   
   )
 )
