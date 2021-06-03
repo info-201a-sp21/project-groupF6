@@ -149,6 +149,10 @@ ui <- fluidPage(
     
     ## 1st Takeaway
     h3("Total Medals"),
+    br(),
+    HTML('<img src = "medal.jpg">'),
+    br(),
+    br(),
     h4("United States"),
     paste("Throughout the years, United States has demonstrated their",
           "dominance in the Olympics. Ever since 1904, United States has",
@@ -175,6 +179,10 @@ ui <- fluidPage(
     
     ## 2nd Takeaway
     h3("Gender"),
+    br(),
+    HTML('<img src = "gender.jpeg">'),
+    br(),
+    br(),
     h4("Sex and Medal Earned"),
     paste("Males were able to acquire 9524 bronze medals, 9381 silver medals",
           "and 9625 gold medals. Females were able to obatin 3771 bronze",
@@ -199,8 +207,12 @@ ui <- fluidPage(
           "allowed to participate in any event."),
     
     ## 3rd Takeaway
-    h3("Takeaway #3"),
-    h4("Age"),
+    h3("Age"),
+    br(),
+    HTML('<img src = "age.png">'),
+    br(),
+    br(),
+    h4("Age Group"),
     paste("It would only make sense for a 25 year old to have earn more medals",
           "than a 70 year old due to the change in body from old age which can",
           "affect the person's atheltic performance. From the data that we",
